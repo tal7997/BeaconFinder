@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">BeaconFinder</string>
+    <string name="required_tag_name">Required</string>
+    <string name="tag_icon">Tag icon</string>
+    <string name="my_tags">My Tags</string>
+    <string name="next">Next</string>
+    <string name="prev">Previous</string>
+    <string name="editNameButton">Edit name</string>
+    <string name="buttonBatterySwap">Reset battery estimate</string>
+    <string name="batteryEstimate" translatable="false">%1$.0f%%</string>
+    <string name="batteryUnknown" translatable="false">-</string>
+    <string name="batteryEstimate_prefixed">Battery: %1$.0f%%</string>
+    <string name="batteryUnknown_prefixed">Battery: -</string>
+    <string name="distanceEstimate_prefixed">Distance: %1$.0f meters</string>
+    <string name="distanceUnknown_prefixed">Distance: Unknown</string>
+    <string name="hoursEstimate" translatable="false">%1$.0f%%</string>
+    <string name="distanceEstimate">%1$.0f meters</string>
+    <string name="distanceUnknown">Unknown</string>
+    <string name="connectNewTag">Connect new tag</string>
+    <string name="serviceNotificationText">BeaconFinder is scanning for nearby beacons.</string>
+    <string name="qrTitle">QR code</string>
+    <string name="qrDescription">QR code that may be used for sharing this tag to another device</string>
+    <string name="qrInstruction">Scan this QR code with a regular scanner to download the application.\n\nAnd/or scan it using this application to share the tag.</string>
+    <string name="qrScannerInstruction">Place the QR code in the viewfinder to add a tag</string>
+    <string name="locateButton">Locate</string>
+    <string name="saveButton">Save</string>
+    <string name="shareButton">Share</string>
+    <string name="deleteButton">Delete</string>
+    <string name="tagHintID">Name</string>
+    <string name="noNearbyBeacons">No nearby beacons</string>
+    <string name="no_added_beacons">You have no beacons added. Please press the \"Add Tag\" button.</string>
+    <string name="macAddress">MAC Address: %1s</string>
+    <string name="searchedForTagsSummary">%1d tags are searched for</string>
+    <string name="qrScanBtn">Scan QR code</string>
+    <string name="last_location_tag">Last Location</string>
+    <string name="first_location_tag">First Location</string>
+    <string name="my_location">My Location</string>
+    <string name="addTag">Add Tag</string>
+    <string name="trackingInBackground">Tracking in background</string>
+    <string name="batteryAlerts">Battery alerts</string>
+    <string name="editNotification">Edit Notification</string>
+    <string name="actions">Actions</string>
+    <string name="tagName">Tag Name</string>
+    <string name="tagDistance">7.8km</string>
+    <string name="shareLink">Share Link</string>
+    <string name="overview_markers">Overview Markers</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_nav_app">Select navigation app</string>
+    <string name="waze" translatable="false">Waze</string>
+    <string name="google_maps" translatable="false">Google Maps</string>
+    <string name="meters_away">%1$.0f Meters away</string>
+    <string name="km_away">%1$.0f KM away</string>
+    <string name="nav_to_marker">Navigate to marker</string>
+    <string name="enter_notification">Enter notification</string>
+    <string name="tag_nearby_notification_edit_msg">This message will appear if someone spots this tag nearby</string>
+    <string name="okButton">OK</string>
+    <string name="batteryDialogMessage">This will reset the battery estimate percentage, we estimate each tag has 4 weeks battery life span.</string>
+    <string name="batteryDialogTitle">Reset Battery Estimate</string>
+    <string name="editNameDialogTitle">Change tag name</string>
+    <string name="editNameDialogMessage">Input the new tag name:</string>
+    <string name="deleteTagDialogMessage">Are you sure you want to delete this Tag?</string>
+    <string name="deleteTagDialogTitle">Delete tag %1$s ?</string>
+    <string name="lastSeenMinutes">Last seen %1$.0f minutes ago</string>
+    <string name="lastSeenHours">Last seen %1$.0f hours and %2$.0f minutes ago</string>
+    <string name="pickExpiryDate">Pick how long the shared tag will be valid for.\n\nAfter this period the shared tag will be deleted from people who used the link.</string>
+    <string name="expiry12h">12 hours</string>
+    <string name="expiry48h">48 hours</string>
+    <string name="expiryWeek">1 Week</string>
+    <string name="expiryPermanent">Permanent</string>
+    <string name="expiryLabel">Expires at %1$s</string>
+    <string name="default_notification_channel_id" translatable="false">Cloud Notification</string>
+
+    <string name="fcm_message" translatable="false">FCM Message</string>
+
+
+    <string name="title_chat" translatable="false">Chat</string>
+    <string name="title_social" translatable="false">Social Network</string>
+    <string name="title_home" translatable="false">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

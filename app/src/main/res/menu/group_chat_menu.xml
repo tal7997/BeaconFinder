@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_add_member"
+        android:title="Add Member"
+        android:icon="@drawable/ic_add_members" />
+    <item
+        android:id="@+id/Show_members"
+        android:title="Members"
+        android:icon="@drawable/ic_group_members" />
+</menu>

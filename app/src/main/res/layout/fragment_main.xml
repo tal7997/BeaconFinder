@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature_my_tag.MainFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/my_tags"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textSize="34sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/rvTagList"
+        app:layout_constraintEnd_toStartOf="@+id/btnAddTag"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTagList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linLayoutSwitches"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:itemCount="4"
+        tools:listitem="@layout/rv_tag">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvNoBeaconsAdded"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/no_added_beacons"
+        android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+        android:visibility="visible"
+        app:autoSizeMaxTextSize="34sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/linLayoutSwitches"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linLayoutSwitches"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvTagList">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchBackgroundTracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/trackingInBackground"
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddTag"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:theme="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:elevation="5dp"
+        app:cornerRadius="15dp"
+        android:text="@string/addTag"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:icon="@drawable/ic_baseline_add_24"
+        app:iconPadding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/rvTagList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

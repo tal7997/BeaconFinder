@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TagViewFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvViewTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/materialDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:id="@+id/linLayoutTagCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constLayoutTag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/constLayoutTagName"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_border_width="1dp"
+                    app:riv_corner_radius="100dp"
+                    app:riv_mutate_background="true"
+                    tools:src="@tools:sample/avatars" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constLayoutTagName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivIcon"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/editTagNameButton"
+                        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:contentDescription="@string/editNameButton"
+                        android:elevation="5dp"
+                        android:minWidth="24dp"
+                        android:paddingHorizontal="1dp"
+                        android:paddingVertical="0dp"
+                        android:theme="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                        app:cornerRadius="10dp"
+                        app:icon="@drawable/ic_baseline_edit_24"
+                        app:iconPadding="0dp"
+                        app:iconSize="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/textInputLayoutTagName"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeWidth="1dp"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textInputLayoutTagName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="@string/tagHintID"
+                        app:boxCornerRadiusTopEnd="15dp"
+                        app:boxCornerRadiusTopStart="15dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/editTagNameButton"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/editTextTagName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:enabled="false"
+                            android:importantForAutofill="no"
+                            android:inputType="textShortMessage|text"
+                            android:minHeight="48dp"
+                            android:textSize="18sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linLayoutTagParams"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constLayoutTag">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvDistanceEstimate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="@string/distanceEstimate"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvBatteryEstimate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="@string/hoursEstimate"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:autoSizeTextType="uniform" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvMacAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="@string/macAddress"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                    android:textSize="14sp"
+                    app:autoSizeTextType="uniform" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:id="@+id/text_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tag Found :"
+                        ></TextView>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:checked="false"
+                        android:textOff="Found"
+                        android:textOn="Missing " />
+
+                </LinearLayout>
+
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvExpiresAt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="@string/expiryPermanent"
+                    android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
+                    android:textSize="14sp"
+                    app:autoSizeTextType="uniform" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        app:dividerInsetEnd="16dp"
+        app:dividerInsetStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnBatterySwap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvViewTag" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBatterySwap"
+        style="@style/Widget.Material3.Button.TonalButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buttonBatterySwap"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:theme="@style/Widget.Material3.Button.TonalButton.Icon"
+        app:cornerRadius="15dp"
+        app:icon="@android:drawable/ic_lock_idle_low_battery"
+        app:iconPadding="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialDivider2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/materialDivider2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        app:dividerInsetEnd="16dp"
+        app:dividerInsetStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linLayoutTagButtons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBatterySwap" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linLayoutTagButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialDivider2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constLayoutTagButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btnTagDelete"
+            app:layout_constraintEnd_toStartOf="@+id/btnTagDelete"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTagLocate"
+                style="@style/Widget.Material3.Button.TonalButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/locateButton"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:theme="@style/Widget.Material3.Button.TonalButton.Icon"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ic_baseline_location_on_24"
+                app:iconPadding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnTagShare"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTagShare"
+                style="@style/Widget.Material3.Button.TonalButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/shareButton"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:theme="@style/Widget.Material3.Button.TonalButton.Icon"
+                app:cornerRadius="15dp"
+                app:icon="@drawable/ic_baseline_share_24"
+                app:iconPadding="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnTagLocate"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTagDelete"
+            style="@style/Widget.Material3.Button.TonalButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/deleteButton"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:theme="@style/Widget.Material3.Button.TonalButton.Icon"
+            app:cornerRadius="15dp"
+            app:icon="@drawable/ic_baseline_delete_forever_24"
+            app:iconPadding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/constLayoutTagButtons"
+            app:layout_constraintTop_toBottomOf="@+id/constLayoutTagButtons" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

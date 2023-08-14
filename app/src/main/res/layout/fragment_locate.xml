@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LocateFragment">
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabActions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/actions"
+        app:icon="@drawable/ic_action_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMyLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/my_location"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fabActions"
+        app:layout_constraintEnd_toEndOf="@+id/fabActions"
+        app:srcCompat="@drawable/ic_action_myloc" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMyLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/my_location"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fabMyLoc"
+        app:layout_constraintEnd_toStartOf="@+id/fabMyLoc"
+        app:layout_constraintTop_toTopOf="@+id/fabMyLoc" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFirstLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/first_location_tag"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fabMyLoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabMyLoc"
+        app:layout_constraintStart_toStartOf="@+id/fabMyLoc"
+        app:srcCompat="@drawable/ic_action_loc" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvFirstLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/first_location_tag"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fabFirstLoc"
+        app:layout_constraintEnd_toStartOf="@+id/fabFirstLoc"
+        app:layout_constraintTop_toTopOf="@+id/fabFirstLoc" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabLastLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/last_location_tag"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fabFirstLoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabFirstLoc"
+        app:layout_constraintStart_toStartOf="@+id/fabFirstLoc"
+        app:srcCompat="@drawable/ic_action_loc" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvLastLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/last_location_tag"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fabLastLoc"
+        app:layout_constraintEnd_toStartOf="@+id/fabLastLoc"
+        app:layout_constraintTop_toTopOf="@+id/fabLastLoc" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDefaultZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/last_location_tag"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fabLastLoc"
+        app:layout_constraintEnd_toEndOf="@+id/fabLastLoc"
+        app:layout_constraintStart_toStartOf="@+id/fabLastLoc"
+        app:srcCompat="@drawable/ic_action_center" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDefaultZoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/overview_markers"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fabDefaultZoom"
+        app:layout_constraintEnd_toStartOf="@+id/fabDefaultZoom"
+        app:layout_constraintTop_toTopOf="@+id/fabDefaultZoom" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabEditNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:contentDescription="@string/editNotification"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toTopOf="@+id/fabDefaultZoom"
+        app:layout_constraintEnd_toEndOf="@+id/fabDefaultZoom"
+        app:layout_constraintStart_toStartOf="@+id/fabDefaultZoom"
+        app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvEditNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/editNotification"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fabEditNotification"
+        app:layout_constraintEnd_toStartOf="@+id/fabEditNotification"
+        app:layout_constraintTop_toTopOf="@+id/fabEditNotification" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

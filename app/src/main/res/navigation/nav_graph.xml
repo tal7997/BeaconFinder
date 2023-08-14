@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_fragment"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/tagViewFragment"
+        android:name="il.ac.hit.beaconfinder.TagViewFragment"
+        android:label="Tag View"
+        tools:layout="@layout/fragment_tag_view" >
+        <action
+            android:id="@+id/action_tagViewFragment_to_locateFragment"
+            app:destination="@id/locateFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <argument
+            android:name="tag"
+            app:argType="il.ac.hit.beaconfinder.TagData" />
+        <action
+            android:id="@+id/action_tagViewFragment_to_shareFragment"
+            app:destination="@id/shareFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_tagViewFragment_to_expiryChoiceFragment"
+            app:destination="@id/expiryChoiceFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="il.ac.hit.beaconfinder.feature_my_tag.MainFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_tagViewFragment"
+            app:destination="@id/tagViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_mainFragment_to_tagConnectFragment"
+            app:destination="@id/tagConnectFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/socialNetworkFragment"
+        android:name="il.ac.hit.beaconfinder.features_group.group.GroupFragment"
+        android:label="Chat Room"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/chatFragment_to_GroupChatFragment"
+            app:destination="@id/GroupChatFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/GroupChatFragment"
+        android:name="il.ac.hit.beaconfinder.features_group.group_chat.GroupChatFragment"
+        android:label="Chat Room"
+        tools:layout="@layout/fragment_group_chat">
+
+        <action
+            android:id="@+id/GroupChatFragment_to_GroupMember"
+            app:destination="@id/GroupMember"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+        <action
+            android:id="@+id/GroupChatFragment_to_ShowGroupMember"
+            app:destination="@id/ShowGroupMember"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/ShowGroupMember"
+        android:name="il.ac.hit.beaconfinder.features_group.showGroupMemeber.ShowGroupMember"
+        android:label="Group Member"
+        tools:layout="@layout/fragment_group_members">
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/GroupMember"
+        android:name="il.ac.hit.beaconfinder.features_group.group_member.InviteGroupMemberFragment"
+        android:label="Group Member"
+        tools:layout="@layout/fragment_group_member">
+
+    </fragment>
+
+
+
+
+<!--    <fragment
+        android:id="@+id/socialNetworkFragment"
+        android:name="il.ac.hit.beaconfinder.feature_socialNetwork.SocialNetworkFragment"
+        android:label="Members"
+        tools:layout="@layout/fragment_main">
+
+    </fragment>-->
+
+
+
+    <fragment
+        android:id="@+id/locateFragment"
+        android:name="il.ac.hit.beaconfinder.LocateFragment"
+        android:label="fragment_locate"
+        tools:layout="@layout/fragment_locate" >
+        <argument
+            android:name="tag"
+            app:argType="il.ac.hit.beaconfinder.TagData" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagConnectFragment"
+        android:name="il.ac.hit.beaconfinder.TagConnectFragment"
+        android:label="fragment_token_connect"
+        tools:layout="@layout/fragment_tag_connect" >
+        <action
+            android:id="@+id/action_tagConnectFragment_to_tagViewFragment"
+            app:destination="@id/tagViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_tagConnectFragment_to_qrScannerFragment"
+            app:destination="@id/qrScannerFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="il.ac.hit.beaconfinder.ShareFragment"
+        android:label="fragment_share"
+        tools:layout="@layout/fragment_share" >
+        <argument
+            android:name="tag"
+            app:argType="il.ac.hit.beaconfinder.TagData" />
+        <argument
+            android:name="hoursToKeep"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/qrScannerFragment"
+        android:name="il.ac.hit.beaconfinder.QrScannerFragment"
+        android:label="QrScannerFragment"
+        tools:layout="@layout/fragment_qr_scanner" />
+    <fragment
+        android:id="@+id/expiryChoiceFragment"
+        android:name="il.ac.hit.beaconfinder.ExpiryChoiceFragment"
+        android:label="fragment_expiry_choice"
+        tools:layout="@layout/fragment_expiry_choice" >
+        <argument
+            android:name="tag"
+            app:argType="il.ac.hit.beaconfinder.TagData" />
+    </fragment>
+
+</navigation>

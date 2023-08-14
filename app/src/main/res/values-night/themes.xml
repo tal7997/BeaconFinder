@@ -1,0 +1,33 @@
+<resources>
+    <style name="Theme.BeaconFinder" parent="Theme.Material3.Dark">
+<!--        &lt;!&ndash; The color displayed most frequently across your app’s screens and components. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/night_primary</item>-->
+
+<!--        &lt;!&ndash; A tonal variation of the primary color.	 &ndash;&gt;-->
+<!--        <item name="colorPrimaryVariant">@color/night_primary_dark</item>-->
+
+<!--        &lt;!&ndash; A color for text/iconography when drawn on top of the primary color. &ndash;&gt;-->
+<!--        <item name="colorOnPrimary">@color/night_text_primary</item>-->
+
+<!--        &lt;!&ndash; The secondary branding color for the app, usually an accented complement to the primary branding color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/night_secondary</item>-->
+
+<!--        &lt;!&ndash; A tonal variation of the secondary color. &ndash;&gt;-->
+<!--        <item name="colorSecondaryVariant">@color/night_secondary_dark</item>-->
+
+<!--        &lt;!&ndash; A color for text/iconography when drawn on top of the secondary color. &ndash;&gt;-->
+<!--        <item name="colorOnSecondary">@color/night_text_secondary</item>-->
+
+<!--        &lt;!&ndash; The background color appears behind scrollable content. &ndash;&gt;-->
+<!--        <item name="android:colorBackground">@color/night_background</item>-->
+
+<!--        &lt;!&ndash; A color for text/iconography when drawn on top of the background color. &ndash;&gt;-->
+<!--        <item name="colorOnBackground">@color/night_on_background</item>-->
+
+<!--        &lt;!&ndash; Surface colors affect surfaces of components, such as cards, sheets, and menus. &ndash;&gt;-->
+<!--        <item name="colorSurface">@color/night_surface</item>-->
+
+<!--        &lt;!&ndash; A color text/iconography when drawn on top of the surface color. &ndash;&gt;-->
+<!--        <item name="colorOnSurface">@color/night_on_surface</item>-->
+    </style>
+</resources>

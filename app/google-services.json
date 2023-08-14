@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185728455311",
+    "project_id": "beaconfinder-hit",
+    "storage_bucket": "beaconfinder-hit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185728455311:android:65a6725a8cd89ef86856fa",
+        "android_client_info": {
+          "package_name": "il.ac.hit.beaconfinder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185728455311-4qjf6tl7ep4erpepv5m97q0cgnbl5mlh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAm8zwyd6ccAbPR7mk-rTRpqV-iGX8cMLU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185728455311-4qjf6tl7ep4erpepv5m97q0cgnbl5mlh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

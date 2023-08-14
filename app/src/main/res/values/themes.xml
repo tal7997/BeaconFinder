@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.BeaconFinder" parent="Theme.Material3.Light">
+
+        <item name="android:colorBackground">@color/background</item>
+    </style>
+
+</resources>
